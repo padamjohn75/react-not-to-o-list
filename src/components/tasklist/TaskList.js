@@ -9,11 +9,10 @@ export const TaskList = ({
 }) => {
   return (
     <>
-      <h3>Task List</h3>
-      <Table striped bordered hover size="sm">
+      <h3> To do Task</h3>
+      <Table variant="info" striped bordered hover size="sm">
         <thead>
           <tr>
-            <th></th>
             <th>Tasks</th>
             <th>Hours</th>
             <th>Action</th>
@@ -23,24 +22,24 @@ export const TaskList = ({
           {taskLists.map((row, i) => (
             <tr key={i}>
               <td>
-                {" "}
-                <td>
-                  <input
-                    type="checkbox"
-                    defaultValue={i}
-                    onChange={handleOnChange}
-                  />
-                  <label>{row?.title}</label>
-                </td>
+                <input
+                  type="checkbox"
+                  defaultValue={i}
+                  onChange={handleOnChange}
+                />
+                <label>{row?.title}</label>
               </td>
-              <td>{row?.title}</td>
               <td>{row?.hr}</td>
               <td>
-                <Button onClick={() => handleOnMarkAsNotAddTask(i)}>
+                <Button
+                  class="btn btn-primary"
+                  onClick={() => handleOnMarkAsNotAddTask(i)}
+                >
                   {" "}
-                  Mark As Not to Do
+                  Not to Do
                 </Button>
                 <Button
+                  class="btn btn-danger"
                   variant="danger"
                   onClick={() => handleDeleteNotToDoList(i)}
                 >

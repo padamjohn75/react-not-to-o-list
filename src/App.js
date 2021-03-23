@@ -199,11 +199,11 @@ function App() {
           </Col>
         </Row>
         <Row>
-          <Alert variant="primary">
+          <Alert variant="success">
             Your total Alocated time={totalHrs} /168 hours
           </Alert>
         </Row>
-        <button variant="danger" onClick={deleteItems}>
+        <button class="btn btn-danger" onClick={deleteItems}>
           Delete
         </button>
       </Container>

@@ -17,8 +17,8 @@ export const NotToDoList = ({
 
   return (
     <>
-      <h3>Not to do Task List</h3>
-      <Table striped bordered hover size="sm">
+      <h3>Not to do Task</h3>
+      <Table variant="info" striped bordered hover size="sm">
         <thead>
           <tr>
             <th>Tasks</th>
@@ -35,12 +35,11 @@ export const NotToDoList = ({
                   defaultValue={i}
                   onChange={handleOnNotToDoChange}
                 />
-                {row?.title}
                 <label>{row.title}</label>
               </td>
               <td>{row?.hr}</td>
               <td>
-                <Button onClick={() => handleAsToDo(i)}> Mark As to Do</Button>
+                <Button onClick={() => handleAsToDo(i)}> To Do</Button>
                 <Button variant="danger" onClick={() => handleDelete(i)}>
                   {" "}
                   Delete
@@ -49,8 +48,8 @@ export const NotToDoList = ({
             </tr>
           ))}
         </tbody>
-        your saved ={totalSavedTime} hours
       </Table>
+      <div class="timeDiv"> You saved ={totalSavedTime} hours</div>
     </>
   );
 };

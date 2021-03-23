@@ -54,7 +54,9 @@ export const AddForm = ({ handleOnAddTask }) => {
           />
         </Col>
         <Col>
-          <Button type="submit">Add Task</Button>
+          <Button class="btn btn-primary" type="submit">
+            Add Task
+          </Button>
         </Col>
       </Row>
     </Form>

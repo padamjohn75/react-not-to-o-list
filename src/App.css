@@ -1,8 +1,30 @@
 .main {
+  background-image: url("/src/bgimg.jpg");
   min-height: 100vh;
 }
 
 input:checked + label {
   color: red;
   text-decoration: line-through;
+}
+
+/* buttons */
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+}
+.table {
+  border: black;
+}
+.timeDiv {
+  background-color: rgb(199, 243, 158);
+}
+.frmTitle {
+  width: 10%;
 }
